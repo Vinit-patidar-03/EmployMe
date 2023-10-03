@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="../static/favicon.ico", type="image/x-icon")
+    style 
+     include ../static/style.css
+    //- title= title ---> this syntax is fine take care that no space between html tag and equal to sign.
+    title #{title}
+  body 
+  
+    div#contact
+        h3 For get in Touch Fill the Form shown below
+        form(action="/submit", method="post")
+            input#name(type="text", name="name", required, placeholder="Enter Your Name")
+            input#email(type="email", name="email", required, placeholder="Enter Your Email")
+            input#phone(type="number", name="phone", required, placeholder="Enter Your Phone No") 
+            input#age(type="number", name="age", required, placeholder="Enter Your Age") 
+            select#gender(name="gender", value="0", required)
+             option(value="0") select gender 
+             option(value="Male") Male 
+             option(value="Female") Female 
+             option(value="Other") Other    
+            input#email(type="text", name="occupation", required, placeholder="Enter Your Previous Occupation")
+            input#phone(type="text", name="skills",required, placeholder="Enter Your Skillset") 
+            input#address(type="text", name="address",required, placeholder="Enter Your Address")
+            button.btn 
+              | submit 
