@@ -35,7 +35,7 @@ app.set('view engine', 'pug')
 
 app.use('/static',express.static('static'));
 
-app.set('views',path.join(__dirname,'views'));
+// app.set('views',path.join(__dirname,'views'));
 
 app.post('/submit',(req,res)=>
 {
