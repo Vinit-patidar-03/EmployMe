@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
 require('dotenv').config();
-const port = 80 || process.env.PORT;
+const port = 5000 || process.env.PORT;
 const path = require('path')
 
 app.use(bodyParser.json());
@@ -61,5 +61,5 @@ app.get('/connect',(req,res)=>
 
 app.listen(port,(req,res)=>
 {
-    console.log('app started at the port 80');
+    console.log(`app started at the port http://localhost:${port}`);
 });
